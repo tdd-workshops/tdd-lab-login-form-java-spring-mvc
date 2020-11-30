@@ -65,7 +65,7 @@ public class UserController {
 		User userExists = userService.findUserByEmail(user.getEmail());
 
 		if (userExists == null) {
-			model.addObject("msg", "This account doesn't exists!");
+			model.addObject("msg", "This account doesn't exist!");
 			model.setViewName("user/login");
 		} else {
 			model.addObject("userName", userExists.getFirstname());
